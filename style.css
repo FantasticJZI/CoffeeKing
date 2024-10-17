@@ -1,0 +1,315 @@
+@font-face {
+  font-family: 'ChenYuluoyan';
+  src:url('ChenYuluoyan-Thin-Monospaced.ttf') format("truetype")
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+  font-family: 'ChenYuluoyan';
+  font-family: 'ChenYuluoyan';
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(coffee_beans.jpg);
+  background-size:cover;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+    font-family: 'ChenYuluoyan';
+    width: 4.5em;
+    height: 2.3em;
+    margin: 0.5em;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   button:hover {
+    color: black;
+   }
+   
+   button:after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }
+
+   .textInputWrapper {
+    position: relative;
+    width: 180px;
+    margin: 12px 5px;
+    --accent-color: #ffbd7b;
+  }
+  
+  .textInputWrapper:before {
+    transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+  }
+  
+  .textInputWrapper:before,
+  .textInputWrapper:after {
+    color: cornsilk;
+    content: "";
+    left: 0;
+    right: 0;
+    position: absolute;
+    pointer-events: none;
+    bottom: -1px;
+    z-index: 4;
+    width: 100%;
+  }
+  
+  .textInputWrapper:focus-within:before {
+    border-bottom: 1px solid var(--accent-color);
+  }
+  
+  .textInputWrapper:before {
+    transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+  }
+  
+  .textInputWrapper:focus-within:before {
+    border-bottom: 1px solid var(--accent-color);
+    transform: scaleX(1);
+  }
+  
+  .textInputWrapper:focus-within:after {
+    border-bottom: 2px solid var(--accent-color);
+    transform: scaleX(1);
+  }
+  
+  .textInputWrapper:after {
+    color: cornsilk;
+    content: "";
+    transform: scaleX(0);
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    will-change: transform;
+    border-bottom: 2px solid var(--accent-color);
+    border-bottom-color: var(--accent-color);
+  }
+  
+  .textInput::placeholder {
+    transition: opacity 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    opacity: 1;
+    user-select: none;
+    color: rgba(255, 255, 255, 0.582);
+  }
+  
+  .textInputWrapper .textInput {
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 2px 5px rgb(35 35 35 / 30%);
+    max-height: 36px;
+    background-color: #252525;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 200ms;
+    transition-property: background-color;
+    color: #e8e8e8;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px;
+    width: 100%;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+  }
+  
+  .textInputWrapper .textInput:focus,
+  .textInputWrapper .textInput:active {
+    outline: none;
+  }
+  
+  .textInputWrapper:focus-within .textInput,
+  .textInputWrapper .textInput:focus,
+  .textInputWrapper .textInput:active {
+    background-color: #353535;
+  }
+  
+  .textInputWrapper:focus-within .textInput::placeholder {
+    opacity: 0;
+  }
+
+  .input {
+    background-color: black;
+    /* text-align: center; */
+    border: 2px solid white;
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+  }
+  
+  .input:focus {
+    color: white;
+    background-color: black;
+    outline-color: chocolate;
+    box-shadow: -3px -3px 15px chocolate;
+    transition: .1s;
+    transition-property: box-shadow;
+  }
+
+  form{
+    position: relative;
+    background-color: rgb(175, 175, 175);
+    border-style: solid;
+    border-color: #252525;
+    border-radius: 10px;
+    font-size: large;
+    color: black;
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  table{
+    font-size: large;
+    border:1px solid black ;
+    background-color: wheat;
+    border-radius: 10px;
+  }
+
+  .fb{
+    background-color: white;
+    background-image: url(coffee_beans.jpg);
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    max-width: 16cm;
+    padding: 1cm;
+    margin-top: 5%;
+  }
+
+  footer{
+    background-color: black;
+    color: cornsilk;
+    text-align: center;
+    margin-top: auto;
+    padding: 20px;
+  }
+
+  header{
+    color:black;
+    background-color:cornsilk;
+    font-weight:bold;
+    padding-left:20px;
+    padding: 15px;
+    font-size: xx-large;
+    display: inline;
+  }
+
+  nav{
+    display: inline;
+    position: absolute;
+    padding-left:35%;
+  }
+
+  nav pro{
+    position: relative;
+    left:8cm;
+  }
+
+  textarea{
+    color: white;
+    background-color: black;
+  }
+
+  textarea:focus{
+    color: white;
+    background-color: black;
+    outline-color: grey;
+    box-shadow: -1px -1px 10px white;
+    transition: .1s;
+    transition-property: box-shadow;
+  }
+  section{
+    background-color: #353535;
+    height: 5cm;
+    margin: 1cm;
+    display: inline;
+  }
+
+  .s1{
+    color: cornsilk;
+    margin-left: 6cm;
+    margin-top: 1cm;
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  .s1img{
+    margin-left: 3.1cm;
+  }
+
+  .s1intro{
+    padding:1cm;
+    background-color: grey;
+    color: cornsilk;
+    font-size: larger;
+    font-weight: bold;
+    width: 15cm;
+    position: relative;
+    bottom: 7cm;
+    left:15cm;
+  }
+
+  main{
+    padding-top: 100px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+  }
+
+  main p1{
+    background-color: #252525;
+    text-align: center;
+    color: cornsilk;
+  }
+
+  h1{
+    color: cornsilk;
+    background-color: #252525;
+    margin-top:1cm;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  h3{
+    color: cornsilk;
+    margin: 0.3cm;
+    font-size: x-large;
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+  }
+
+  @keyframes fadeIn{
+    to{
+      opacity: 1;
+    }
+  }

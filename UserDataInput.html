@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>烘豆數據</title>
+    <header>
+        <h2>烘豆王
+        <nav>
+            <A HREF="UserDashBoard.html"><button><b>主頁</b></button></A>
+            <A HREF="UserShop.html"><button><b>商店</b></button></A>
+            <A HREF="UserAboutUs.html"><button><b>關於我們</b></button></A>
+            <A HREF="UserDataInput.html"><button><b>數據輸入</b></button></A>
+            <A HREF="DataCheck.php"><button><b>數據總覽</b></button></A>
+            <A HREF="UserLogout.php"><button><b>登出</b></button></A>
+        </nav>
+    </header>
+</head>
+<body>
+    <center>
+    <form action="UserDataInput.php" method="post">
+    <br> 
+    <b><h2>豆種</h2></b><div class="textInputWrapper"><input placeholder="今天烘的豆種" type="text" name="beanName" class="textInput" required></div>  
+    <br>
+    <table>
+        <TR>
+            <TH>批次</TH>
+            <TD><textarea name="batch" type="text" required></textarea></TD>
+        </TR>
+
+        <TR>
+            <TH>總時間</TH>
+            <TD><textarea name="TotalTime" type="text" required></textarea></TD>
+        </TR>
+            
+        <TR>
+            <TH>脫水期時長</TH>
+            <TD><textarea name="RowBean" type="text" required></textarea></TD>
+        </TR>
+
+        <TR>
+            <TH>脫水期溫度(°C)</TH>
+            <TD><textarea name="RowBeanTemp" type="text" required></textarea></TD>
+        </TR>
+            
+        <TR>
+            <TH>第一階段焦糖化時長</TH>
+            <TD><textarea name="FirstCaramel" type="text" required></textarea></TD>
+        </TR>
+
+        <TR>
+            <TH>第一階段焦糖化溫度(°C)</TH>
+            <TD><textarea name="FirstCaramelTemp" type="text" required></textarea></TD>
+        </TR>
+            
+        <TR>
+            <TH>第二階段焦糖化時長</TH>
+            <TD><textarea name="SecondCaramel" type="text" required></textarea></TD>
+        </TR>
+
+        <TR>
+            <TH>第二階段焦糖化溫度(°C)</TH>
+            <TD><textarea name="SecondCaramelTemp" type="text" required></textarea></TD>
+        </TR>
+            
+        <TR>
+            <TH>第三階段焦糖化時長</TH>
+            <TD><textarea name="ThirdCaramel" type="text" required></textarea></TD>
+        </TR>
+
+        <TR>
+            <TH>第三階段焦糖化溫度(°C)</TH>
+            <TD><textarea name="ThirdCaramelTemp" type="text" required></textarea></TD>
+        </TR>
+            
+        <TR>
+            <TH>發展期時長</TH>
+            <TD><textarea name="Developement" type="text" required></textarea></TD>
+        </TR>
+
+        <TR>
+            <TH>發展期溫度(°C)</TH>
+            <TD><textarea name="DevelopementTemp" type="text" required></textarea></TD>
+        </TR>
+            
+        <TR>
+            <TH>一爆時間點</TH>
+            <TD><textarea name="FirstCrack" type="text" required></textarea></TD>
+        </TR>
+
+        <TR>
+            <TH>一爆溫度(°C)</TH>
+            <TD><textarea name="FirstCrackTemp" type="text" required></textarea></TD>
+        </TR>
+            
+        <TR>
+            <TH>一爆至連續爆時長</TH>
+            <TD><textarea name="SecondCrack" type="text" required></textarea></TD>
+        </TR>
+
+        <TR>
+            <TH>一爆連續溫度(°C)</TH>
+            <TD><textarea name="SecondCrackTemp" type="text" required></textarea></TD>
+        </TR>
+    </table>
+    <br>
+    <h3>備註:</h3><textarea name="note" type="text" rows="5" cols="30">今日的氣溫或水氣等等....</textarea>
+    <br>
+    <button type="submit" name="submit">送出</button>
+    </b>
+    </form>
+    </center>
+</body>
+<footer>
+    <b>Copyright @ 2024 烘豆王 All Right Reserve.</b>
+</footer>
+</html>
